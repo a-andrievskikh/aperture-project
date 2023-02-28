@@ -10,7 +10,7 @@ module.exports = {
 	target,
 	devtool,
 	context: path.resolve(__dirname, '../src'),
-	entry: ['@babel/polyfill', '/index.js'],
+	entry: ['@babel/polyfill', '/main.js'],
 	output: {
 		path: path.resolve(__dirname, '../dist'),
 	},
