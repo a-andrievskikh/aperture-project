@@ -65,4 +65,7 @@ module.exports = merge(common, {
 			},
 		],
 	},
+	stats: {
+		preset: 'minimal',
+	},
 });
