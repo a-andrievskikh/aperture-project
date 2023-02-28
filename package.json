@@ -39,7 +39,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:a-andrievskikh/aerounion"
+		"url": "git@github.com:a-andrievskikh/aperture-project"
 	},
 	"dependencies": {
 		"@babel/polyfill": "^7.12.1",
