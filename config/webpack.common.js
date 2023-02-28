@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlPlugin = require('html-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV === 'development';
@@ -21,7 +21,7 @@ module.exports = {
 			filename: devMode ? '[name].css' : '[name].[contenthash].css',
 			chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
 		}),
-		new HtmlPlugin({
+		new HTMLWebpackPlugin({
 			title: 'Aperture',
 			template: 'template.html',
 			filename: 'index.html',
