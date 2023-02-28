@@ -55,16 +55,6 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.ts$/i,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: ['@babel/preset-env', '@babel/preset-typescript'],
-					},
-				},
-			},
-			{
 				test: /\.jsx$/i,
 				exclude: /node_modules/,
 				use: {
