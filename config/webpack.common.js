@@ -6,6 +6,8 @@ const devMode = process.env.NODE_ENV === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'inline-source-map' : false;
 
+console.log(`${process.env.NODE_ENV} mode:`);
+
 module.exports = {
 	target,
 	devtool,
