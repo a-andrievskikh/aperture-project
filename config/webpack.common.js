@@ -20,7 +20,7 @@ module.exports = {
 			chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
 		}),
 		new HtmlPlugin({
-			title: 'Aerounion',
+			title: 'Aperture',
 			template: 'template.html',
 			filename: 'index.html',
 		}),
