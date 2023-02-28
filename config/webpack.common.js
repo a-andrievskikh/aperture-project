@@ -22,8 +22,7 @@ module.exports = {
 			chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
 		}),
 		new HTMLWebpackPlugin({
-			title: 'Aperture',
-			template: 'template.html',
+			template: 'index.html',
 			filename: 'index.html',
 		}),
 	],
