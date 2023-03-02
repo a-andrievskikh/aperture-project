@@ -7,6 +7,8 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(common, {
+	mode: 'production',
+	devtool: false,
 	output: {
 		clean: true,
 		filename: '[name].[contenthash].bundle.js',
