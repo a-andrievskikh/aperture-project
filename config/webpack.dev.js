@@ -15,7 +15,7 @@ module.exports = merge(common, {
 			directory: path.join(__dirname, 'dist'),
 		},
 		watchFiles: {
-			paths: ['src/**/*.*', 'assets/scss/**/*.*'],
+			paths: ['src/**/*.*', 'assets/**/*.*'],
 			options: {
 				usePolling: true,
 			},
@@ -32,10 +32,6 @@ module.exports = merge(common, {
 
 	module: {
 		rules: [
-			{
-				test: /\.html$/i,
-				loader: 'html-loader',
-			},
 			{
 				test: /\.(c|sa|sc)ss$/i,
 				use: [

@@ -12,15 +12,11 @@ module.exports = {
 	target,
 	devtool,
 	context: path.resolve(__dirname, '../src'),
-	entry: ['@babel/polyfill', '/main.js'],
+	entry: ['@babel/polyfill', 'main.js'],
 	output: {
 		path: path.resolve(__dirname, '../dist'),
 	},
 	plugins: [
-		new MiniCssExtractPlugin({
-			filename: devMode ? '[name].css' : '[name].[contenthash].css',
-			chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
-		}),
 		new HTMLWebpackPlugin({
 			template: 'index.html',
 		}),
@@ -28,13 +24,8 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(c|sa|sc)ss$/i,
-				use: [
-					{
-						loader: MiniCssExtractPlugin.loader,
-						options: {},
-					},
-				],
+				test: /\.html$/i,
+				loader: 'html-loader',
 			},
 			{
 				test: /\.(?:ico|jpe?g|webp|gif|png)$/i,
