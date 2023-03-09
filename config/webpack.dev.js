@@ -5,7 +5,6 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
 	mode: 'development',
 	output: {
-		clean: true,
 		filename: '[name].js',
 		assetModuleFilename: '[path][name][ext][query]',
 	},
