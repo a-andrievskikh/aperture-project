@@ -11,15 +11,14 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
 	mode: 'production',
 	output: {
-		clean: true,
-		filename: '[name].[contenthash].bundle.js',
-		assetModuleFilename: '[path][hash][query]',
+		filename: '[name]-[contenthash:8]-bundle.js',
+		assetModuleFilename: '[path][contenthash:8][query]',
 	},
 
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: '[name].[contenthash].css',
-			chunkFilename: '[id].[contenthash].css',
+			filename: 'style-[contenthash:8].css',
+			chunkFilename: '[id]-[contenthash:8].css',
 		}),
 		// new CopyPlugin({
 		// 	patterns: [
