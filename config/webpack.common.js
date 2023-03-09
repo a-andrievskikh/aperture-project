@@ -14,6 +14,7 @@ module.exports = {
 	context: path.resolve(__dirname, '../src'),
 	entry: ['@babel/polyfill', 'main.js'],
 	output: {
+		clean: true,
 		path: path.resolve(__dirname, '../dist'),
 	},
 	plugins: [
