@@ -6,7 +6,6 @@ const { merge } = require('webpack-merge');
 
 // const path = require('path');
 const common = require('./webpack.common');
-// const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
 	mode: 'production',
@@ -20,14 +19,6 @@ module.exports = merge(common, {
 			filename: 'style-[contenthash:8].css',
 			chunkFilename: '[id]-[contenthash:8].css',
 		}),
-		// new CopyPlugin({
-		// 	patterns: [
-		// 		{
-		// 			from: path.resolve(__dirname, '../src/assets'),
-		// 			to: path.resolve(__dirname, '../dist/assets'),
-		// 		},
-		// 	],
-		// }),
 	],
 
 	module: {
